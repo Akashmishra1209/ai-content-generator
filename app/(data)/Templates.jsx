@@ -441,59 +441,383 @@ export const Templates = [
             }
         ]
     },
+
     {
-        name: "Tagline Generator",
-        desc: "Create a Catchy Tagline for Your Brand or Product",
-        category: "Marketing",
-        icon: "https://cdn-icons-png.flaticon.com/128/869/869808.png",
-        aiPrompt: "Generate a Catchy Tagline Based on the Provided Brand or Product Details",
-        slug: "generate-tagline",
-        form: [
+        "name": "Event Invitation Generator",
+        "desc": "Generate professional invitation messages for events.",
+        "category": "Social",
+        "icon": "https://cdn-icons-png.flaticon.com/128/4333/4333600.png",
+        "aiPrompt": "Create a professional invitation message for an event based on the provided details.",
+        "slug": "generate-event-invitation",
+        "form": [
             {
-                label: "Enter Brand or Product Details",
-                field: "textarea",
-                name: "details",
-                required: true
-            }
-        ]
-    },
-    {
-        name: "Customer Review Generator",
-        desc: "Generate Positive Customer Reviews for Your Product or Service",
-        category: "Marketing",
-        icon: "https://cdn-icons-png.flaticon.com/128/3159/3159328.png",
-        aiPrompt: "Generate a Positive Customer Review Based on the Provided Product or Service Information",
-        slug: "generate-customer-review",
-        form: [
-            {
-                label: "Enter Product or Service Details",
-                field: "textarea",
-                name: "details",
-                required: true
-            }
-        ]
-    },
-    {
-        name: "Case Study Outline",
-        desc: "Create an Outline for a Case Study",
-        category: "Content",
-        icon: "https://cdn-icons-png.flaticon.com/128/1437/1437214.png",
-        aiPrompt: "Generate a Case Study Outline Based on the Provided Topic and Details",
-        slug: "generate-case-study-outline",
-        form: [
-            {
-                label: "Enter Topic or Business Scenario",
-                field: "input",
-                name: "topic",
-                required: true
+                "label": "Enter Event Name",
+                "field": "input",
+                "name": "eventName",
+                "required": true
             },
             {
-                label: "Enter Any Key Points or Goals",
-                field: "textarea",
-                name: "keypoints",
-                required: false
+                "label": "Enter Event Details",
+                "field": "textarea",
+                "name": "eventDetails",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Press Release Generator",
+        "desc": "Create structured press releases based on key information.",
+        "category": "Marketing",
+        "icon": "https://cdn-icons-png.flaticon.com/128/3271/3271516.png",
+        "aiPrompt": "Generate a professional press release based on the provided details.",
+        "slug": "generate-press-release",
+        "form": [
+            {
+                "label": "Enter Press Release Topic",
+                "field": "input",
+                "name": "topic",
+                "required": true
+            },
+            {
+                "label": "Enter Key Details",
+                "field": "textarea",
+                "name": "details",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Slogan Generator",
+        "desc": "Generate catchy slogans for your brand or product.",
+        "category": "Marketing",
+        "icon": "https://cdn-icons-png.flaticon.com/128/2645/2645893.png",
+        "aiPrompt": "Create a catchy slogan based on the provided brand or product details.",
+        "slug": "generate-slogan",
+        "form": [
+            {
+                "label": "Enter Brand/Product Name",
+                "field": "input",
+                "name": "brandName",
+                "required": true
+            },
+            {
+                "label": "Enter Brand/Product Description",
+                "field": "textarea",
+                "name": "description",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Ad Copy Generator",
+        "desc": "Generate compelling ad copy for your marketing campaigns.",
+        "category": "Marketing",
+        "icon": "https://cdn-icons-png.flaticon.com/128/4155/4155976.png",
+        "aiPrompt": "Write a compelling ad copy for the provided product or service details.",
+        "slug": "generate-ad-copy",
+        "form": [
+            {
+                "label": "Enter Product/Service Name",
+                "field": "input",
+                "name": "productName",
+                "required": true
+            },
+            {
+                "label": "Enter Product/Service Description",
+                "field": "textarea",
+                "name": "description",
+                "required": true
+            },
+            {
+                "label": "Enter Target Audience",
+                "field": "input",
+                "name": "audience",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Case Study Generator",
+        "desc": "Generate case study content based on a client success story.",
+        "category": "Content",
+        "icon": "https://cdn-icons-png.flaticon.com/128/1290/1290277.png",
+        "aiPrompt": "Create a structured case study based on the provided success story details.",
+        "slug": "generate-case-study",
+        "form": [
+            {
+                "label": "Enter Client Name",
+                "field": "input",
+                "name": "clientName",
+                "required": true
+            },
+            {
+                "label": "Enter Client Problem",
+                "field": "textarea",
+                "name": "problem",
+                "required": true
+            },
+            {
+                "label": "Enter Solution Provided",
+                "field": "textarea",
+                "name": "solution",
+                "required": true
+            },
+            {
+                "label": "Enter Results/Achievements",
+                "field": "textarea",
+                "name": "results",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Customer Testimonial Generator",
+        "desc": "Generate a professional customer testimonial based on customer feedback.",
+        "category": "Marketing",
+        "icon": "https://cdn-icons-png.flaticon.com/128/1875/1875276.png",
+        "aiPrompt": "Create a well-structured customer testimonial based on the provided feedback.",
+        "slug": "generate-testimonial",
+        "form": [
+            {
+                "label": "Enter Customer Name",
+                "field": "input",
+                "name": "customerName",
+                "required": true
+            },
+            {
+                "label": "Enter Customer Feedback",
+                "field": "textarea",
+                "name": "feedback",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Product Tagline Generator",
+        "desc": "Generate a catchy tagline for your product or brand.",
+        "category": "Marketing",
+        "icon": "https://cdn-icons-png.flaticon.com/128/1266/1266012.png",
+        "aiPrompt": "Create a catchy and memorable tagline based on the provided product or brand description.",
+        "slug": "generate-tagline",
+        "form": [
+            {
+                "label": "Enter Product/Brand Name",
+                "field": "input",
+                "name": "brandName",
+                "required": true
+            },
+            {
+                "label": "Enter Product/Brand Description",
+                "field": "textarea",
+                "name": "description",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Mission Statement Generator",
+        "desc": "Create a strong mission statement for your organization.",
+        "category": "Business",
+        "icon": "https://cdn-icons-png.flaticon.com/128/201/201623.png",
+        "aiPrompt": "Generate a strong mission statement based on the provided organization details.",
+        "slug": "generate-mission-statement",
+        "form": [
+            {
+                "label": "Enter Organization Name",
+                "field": "input",
+                "name": "orgName",
+                "required": true
+            },
+            {
+                "label": "Enter Organization Purpose/Goals",
+                "field": "textarea",
+                "name": "purpose",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Vision Statement Generator",
+        "desc": "Generate a clear vision statement for your organization's future.",
+        "category": "Business",
+        "icon": "https://cdn-icons-png.flaticon.com/128/4431/4431125.png",
+        "aiPrompt": "Write a vision statement that clearly describes the future goals of the organization based on the provided details.",
+        "slug": "generate-vision-statement",
+        "form": [
+            {
+                "label": "Enter Organization Name",
+                "field": "input",
+                "name": "orgName",
+                "required": true
+            },
+            {
+                "label": "Enter Organization Long-Term Goals",
+                "field": "textarea",
+                "name": "goals",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Product Description Generator",
+        "desc": "Write appealing product descriptions to attract customers.",
+        "category": "E-commerce",
+        "icon": "https://cdn-icons-png.flaticon.com/128/875/875676.png",
+        "aiPrompt": "Generate an attractive product description based on the provided details.",
+        "slug": "generate-product-description",
+        "form": [
+            {
+                "label": "Enter Product Name",
+                "field": "input",
+                "name": "productName",
+                "required": true
+            },
+            {
+                "label": "Enter Product Features",
+                "field": "textarea",
+                "name": "features",
+                "required": true
+            },
+            {
+                "label": "Enter Target Audience",
+                "field": "input",
+                "name": "audience",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Personal Bio Generator",
+        "desc": "Create a short bio for your social media or professional profiles.",
+        "category": "Personal",
+        "icon": "https://cdn-icons-png.flaticon.com/128/1724/1724329.png",
+        "aiPrompt": "Write a personal bio based on the provided information.",
+        "slug": "generate-bio",
+        "form": [
+            {
+                "label": "Enter Your Name",
+                "field": "input",
+                "name": "name",
+                "required": true
+            },
+            {
+                "label": "Enter Your Profession",
+                "field": "input",
+                "name": "profession",
+                "required": true
+            },
+            {
+                "label": "Enter Your Interests/Hobbies",
+                "field": "textarea",
+                "name": "interests",
+                "required": false
+            }
+        ]
+    },
+    {
+        "name": "Thank You Note Generator",
+        "desc": "Generate thoughtful thank you notes for any occasion.",
+        "category": "Social",
+        "icon": "https://cdn-icons-png.flaticon.com/128/7603/7603846.png",
+        "aiPrompt": "Create a warm thank you note based on the provided details.",
+        "slug": "generate-thank-you-note",
+        "form": [
+            {
+                "label": "Enter Recipient's Name",
+                "field": "input",
+                "name": "recipientName",
+                "required": true
+            },
+            {
+                "label": "Enter Reason for Thanking",
+                "field": "textarea",
+                "name": "reason",
+                "required": true
+            },
+            {
+                "label": "Your Name",
+                "field": "input",
+                "name": "senderName",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Newsletter Content Generator",
+        "desc": "Create engaging content for newsletters.",
+        "category": "Content",
+        "icon": "https://cdn-icons-png.flaticon.com/128/3159/3159310.png",
+        "aiPrompt": "Generate newsletter content based on the provided theme and audience.",
+        "slug": "generate-newsletter",
+        "form": [
+            {
+                "label": "Enter Newsletter Topic",
+                "field": "input",
+                "name": "topic",
+                "required": true
+            },
+            {
+                "label": "Enter Audience Type",
+                "field": "input",
+                "name": "audience",
+                "required": true
+            },
+            {
+                "label": "Main Message",
+                "field": "textarea",
+                "name": "message",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Motivational Quote Generator",
+        "desc": "Generate motivational quotes to inspire others.",
+        "category": "Social",
+        "icon": "https://cdn-icons-png.flaticon.com/128/2540/2540465.png",
+        "aiPrompt": "Create a motivational quote based on the provided theme or keywords.",
+        "slug": "generate-motivational-quote",
+        "form": [
+            {
+                "label": "Enter Theme or Keywords",
+                "field": "textarea",
+                "name": "theme",
+                "required": true
+            }
+        ]
+    },
+    {
+        "name": "Cover Letter Generator",
+        "desc": "Generate a professional cover letter for job applications.",
+        "category": "Career",
+        "icon": "https://cdn-icons-png.flaticon.com/128/3076/3076526.png",
+        "aiPrompt": "Write a professional cover letter based on the provided job and personal information.",
+        "slug": "generate-cover-letter",
+        "form": [
+            {
+                "label": "Enter Job Title",
+                "field": "input",
+                "name": "jobTitle",
+                "required": true
+            },
+            {
+                "label": "Enter Company Name",
+                "field": "input",
+                "name": "companyName",
+                "required": true
+            },
+            {
+                "label": "Enter Your Skills/Qualifications",
+                "field": "textarea",
+                "name": "skills",
+                "required": true
+            },
+            {
+                "label": "Your Name",
+                "field": "input",
+                "name": "yourName",
+                "required": true
             }
         ]
     }
-
-];
+]    
