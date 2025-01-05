@@ -50,7 +50,7 @@ function CountdownTimer({ targetDate }) {
 
 export default function Component() {
   const [isLoading, setIsLoading] = useState(false);
-  const targetDate = new Date("2025-01-01T00:00:00");
+  const targetDate = new Date("2026-01-01T00:00:00");
 
   const handleCheckAgain = () => {
     setIsLoading(true);
@@ -75,7 +75,7 @@ export default function Component() {
             <CountdownTimer targetDate={targetDate} />
           </div>
           <p className="text-sm text-center text-gray-500">
-            Our new billing system will be available on <strong>January 1, 2025</strong>. We appreciate your patience and look forward to serving you!
+            Our new billing system will be available on <strong>January 1, 2026</strong>. We appreciate your patience and look forward to serving you!
           </p>
         </CardContent>
       </Card>
